@@ -1,8 +1,9 @@
+from google.adk.agents import Agent
+from google.adk.tools.agent_tool import AgentTool
+from currency.agent import root_agent as currency_agent
 from google_search.agent import root_agent as google_search_agent
 from travel_info_gather.agent import root_agent as travel_info_gather_agent
 from weather.agent import root_agent as weather_agent
-from google.adk.agents import Agent
-from google.adk.tools.agent_tool import AgentTool
 
 instruction_prompt = """
     You're an agent to provide essential pre-departure information for a traveler.
@@ -26,6 +27,11 @@ instruction_prompt = """
     
     Entry requirements: <explain the entry requirements in more detail>
 
+    CURRENCY
+    -------
+    <Find the currency1 of country1 and currency2 of country2. Calculate and display the currency rate from currency1
+     to currency2. If you don't have the currency info just say: I don't have conversion rate from currency1 to currency2.>
+
     WEATHER
     -------
     <Display the weather in city2 today>
@@ -47,5 +53,9 @@ root_agent = Agent(
     description="Travel helper agent to provide essential pre-departure information for a traveler",
     instruction=instruction_prompt,
     # sub_agents=[greeting_agent, google_search_agent, weather_agent]
-    tools=[AgentTool(agent=travel_info_gather_agent), AgentTool(agent=google_search_agent), AgentTool(agent=weather_agent)]
+    tools=[
+        AgentTool(agent=travel_info_gather_agent),
+        AgentTool(agent=google_search_agent),
+        AgentTool(agent=weather_agent),
+        AgentTool(agent=currency_agent)]
 )

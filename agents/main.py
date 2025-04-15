@@ -1,7 +1,7 @@
-from travel_helper.agent import root_agent as travel_helper_agent
 from google.adk.runners import Runner
 from google.adk.sessions import InMemorySessionService
 from google.genai.types import Content, Part
+from travel_helper.agent import root_agent as travel_helper_agent
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -58,4 +58,6 @@ def main():
 
 
 if __name__ == '__main__':
+    #import logging
+    #logging.basicConfig(level=logging.DEBUG) #, format='%(message)s')
     main()
