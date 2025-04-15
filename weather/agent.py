@@ -47,10 +47,14 @@ def lat_long_to_weather(latitude: str, longitude: str):
     return api_request(url)
 
 
+instruction_prompt = """
+    You're a weather agent that can answer user questions about the weather in a city. 
+"""
+
 root_agent = Agent(
     name="weather_agent",
     model="gemini-2.0-flash",
     description="Agent to answer questions about weather in a city.",
-    instruction="You are a weather agent that can answer user questions about the weather in a city",
+    instruction=instruction_prompt,
     tools=[location_to_lat_long, lat_long_to_weather]
 )

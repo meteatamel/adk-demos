@@ -1,4 +1,4 @@
-from travel_pre_departure_agent.agent import root_agent
+from travel_pre_departure.agent import root_agent
 from google.adk.runners import Runner
 from google.adk.sessions import InMemorySessionService
 from google.genai.types import Content, Part
