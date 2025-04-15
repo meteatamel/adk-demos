@@ -1,12 +1,7 @@
-from greeting_agent.agent import root_agent as greeting_agent
-from google_search_agent.agent import root_agent as google_search_agent
-from weather_agent.agent import root_agent as weather_agent
-from google.adk.agents import Agent
-from google.adk.agents.sequential_agent import SequentialAgent
+from travel_pre_departure_agent.agent import root_agent
 from google.adk.runners import Runner
 from google.adk.sessions import InMemorySessionService
 from google.genai.types import Content, Part
-from google.adk.tools.agent_tool import AgentTool
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -51,21 +46,7 @@ def call_agent(runner, query):
 
 
 def main():
-
-    coordinator_agent = Agent(
-        name="coordinator_agent",
-        model="gemini-2.0-flash",
-        # instruction="Route user requests: Always start with greeting_agent, weather questions to weather_agent, "
-        #             "anything else to google_search_agent.",
-        # description="Main task coordinator.",
-        instruction=("Ask the user which city they're travelling from and to with greeting_agent, then tell the user "
-                     "the weather in the destination city using weather_agent and also a brief history of the destination"
-                     "city with google_search_agent"),
-        #sub_agents=[greeting_agent, google_search_agent, weather_agent]
-        tools=[AgentTool(agent=greeting_agent), AgentTool(agent=google_search_agent), AgentTool(agent=weather_agent)]
-    )
-
-    runner = setup_runner(coordinator_agent)
+    runner = setup_runner(root_agent)
 
     print("Welcome! Start chatting with the agent. Type 'exit' to end.")
     while True:
