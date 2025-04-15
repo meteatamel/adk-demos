@@ -32,17 +32,24 @@ def call_agent(runner, query):
   content = Content(role='user', parts=[Part(text=query)])
   events = runner.run(user_id=USER_ID, session_id=SESSION_ID, new_message=content)
 
-  final_response_text = "Agent did not produce a final response."
+  response_text = ""
 
   for event in events:
+      # You can uncomment the line below to see *all* events during execution
+      #print(f"  [Event] Author: {event.author}, Type: {type(event).__name__}, Final: {event.is_final_response()}, Content: {event.content}")
+
       if event.is_final_response():
           if event.content and event.content.parts:
-             final_response_text = event.content.parts[0].text
+             response_text += event.content.parts[0].text
           elif event.actions and event.actions.escalate:
-             final_response_text = f"Agent escalated: {event.error_message or 'No specific message.'}"
+             response_text = f"Agent escalated: {event.error_message or 'No specific message.'}"
           break # Stop processing events once the final response is found
+      else:
+          if event.content and event.content.parts and event.content.parts[0].text:
+              response_text += event.content.parts[0].text
 
-  print(f"<<< Agent: {final_response_text}")
+
+  print(f"<<< Agent: {response_text}")
 
 
 def main():
