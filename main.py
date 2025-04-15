@@ -1,4 +1,4 @@
-from travel_pre_departure.agent import root_agent
+from travel_helper.agent import root_agent as travel_helper_agent
 from google.adk.runners import Runner
 from google.adk.sessions import InMemorySessionService
 from google.genai.types import Content, Part
@@ -46,7 +46,7 @@ def call_agent(runner, query):
 
 
 def main():
-    runner = setup_runner(root_agent)
+    runner = setup_runner(travel_helper_agent)
 
     print("Welcome! Start chatting with the agent. Type 'exit' to end.")
     while True:

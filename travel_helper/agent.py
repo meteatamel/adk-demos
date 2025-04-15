@@ -42,9 +42,9 @@ instruction_prompt = """
     Enjoy your trip!
 """
 root_agent = Agent(
-    name="travel_pre_departure_agent",
+    name="travel_helper_agent",
     model="gemini-2.0-flash",
-    description="Travel pre-departure agent to provide essential pre-departure information for a traveler",
+    description="Travel helper agent to provide essential pre-departure information for a traveler",
     instruction=instruction_prompt,
     # sub_agents=[greeting_agent, google_search_agent, weather_agent]
     tools=[AgentTool(agent=travel_info_gather_agent), AgentTool(agent=google_search_agent), AgentTool(agent=weather_agent)]
