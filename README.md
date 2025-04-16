@@ -1,34 +1,32 @@
-# Agent Development Kit (ADK) Tutorial
+# Agent Development Kit (ADK) Demos
 
-Create and activate a Python environment:
+<img src="https://github.com/google/adk-docs/blob/main/docs/assets/agent-development-kit.png" alt="Agent Development Kit Logo" width="150">
 
-```shell
-python -m venv .venv
-source .venv/bin/activate
-```
+[Agent Development Kit](https://github.com/google/adk-python) (ADK) is an open-source toolkit for building, evaluating,
+and deploying AI agents. 
 
-Install ADK:
+This repository is a collection of ADK samples/tutorials to get you up to speed. 
 
-```shell
-pip install google-adk
-```
+## Before you start
 
-Copy `dotenv` file to `.env` file and fill your Google AI or Vertex AI information. Here's an
-example for Vertex AI configuration:
+> [!IMPORTANT]  
+> Before you start, make sure to follow the [setup](setup.md) page.
 
-```
-GOOGLE_GENAI_USE_VERTEXAI=TRUE
-GOOGLE_CLOUD_PROJECT=genai-atamel
-GOOGLE_CLOUD_LOCATION=us-central1
-```
+## Samples
 
-Deploy to Cloud Run:
+Follow the following sub-pages for a walkthrough of samples:
 
-```shell
-adk deploy cloud_run \
-  --project="google-cloud-project-id" \
-  --region="us-central1" \
-  --service_name="travel-helper-service" \
-  --with_ui \
-  ./travel_helper
-```
+TODO
+
+## References
+
+* [Documentation: Agent Development Kit](https://google.github.io/adk-docs/)
+* [GitHub: ADK Python repository](https://github.com/google/adk-python)
+* [GitHub: ADK samples repository](https://github.com/google/adk-samples)
+* [Blog: From Zero to Multi-Agents: A Beginner’s Guide to Google Agent Development Kit (ADK)](https://medium.com/@sokratis.kartakis/from-zero-to-multi-agents-a-beginners-guide-to-google-agent-development-kit-adk-b56e9b5f7861)
+* [GitHub: Google ADK Walkthrough: Your Step-by-Step Development Tutorial](https://github.com/sokart/adk-walkthrough/tree/main)
+* [Blog: Agent Development Kit: Making it easy to build multi-agent applications](https://developers.googleblog.com/en/agent-development-kit-easy-to-build-multi-agent-applications/)
+
+-------
+
+This is not an official Google product.
