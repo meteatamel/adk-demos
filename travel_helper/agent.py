@@ -2,7 +2,7 @@ from google.adk.agents import Agent
 from google.adk.tools.agent_tool import AgentTool
 from travel_helper.sub_agents.currency.agent import root_agent as currency_agent
 from travel_helper.sub_agents.google_search.agent import root_agent as google_search_agent
-from travel_helper.sub_agents.travel_info_gather.agent import root_agent as travel_info_gather_agent
+from travel_helper.sub_agents.greeter.agent import root_agent as greeter_agent
 from travel_helper.sub_agents.weather.agent import root_agent as weather_agent
 
 instruction_prompt = """
@@ -53,9 +53,9 @@ root_agent = Agent(
     model="gemini-2.0-flash",
     description="Travel helper agent to provide essential pre-departure information for a traveler",
     instruction=instruction_prompt,
-    # sub_agents=[greeting_agent, google_search_agent, weather_agent]
+    # sub_agents=[greeter_agent, google_search_agent, weather_agent, currency_agent]
     tools=[
-        AgentTool(agent=travel_info_gather_agent),
+        AgentTool(agent=greeter_agent),
         AgentTool(agent=google_search_agent),
         AgentTool(agent=weather_agent),
         AgentTool(agent=currency_agent)]

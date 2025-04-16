@@ -7,16 +7,14 @@ and deploying AI agents.
 
 This repository is a collection of ADK samples/tutorials to get you up to speed. 
 
-## Before you start
-
 > [!IMPORTANT]  
 > Before you start, make sure to follow the [setup](setup.md) page.
 
 ## Samples
 
-Follow the following sub-pages for a walkthrough of samples:
+Follow the following sub-pages for samples/tutorials:
 
-TODO
+* [Travel Helper Agent](./travel_helper)
 
 ## References
 
