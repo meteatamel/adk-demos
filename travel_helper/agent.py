@@ -1,9 +1,9 @@
 from google.adk.agents import Agent
 from google.adk.tools.agent_tool import AgentTool
-from currency.agent import root_agent as currency_agent
-from google_search.agent import root_agent as google_search_agent
-from travel_info_gather.agent import root_agent as travel_info_gather_agent
-from weather.agent import root_agent as weather_agent
+from travel_helper.sub_agents.currency.agent import root_agent as currency_agent
+from travel_helper.sub_agents.google_search.agent import root_agent as google_search_agent
+from travel_helper.sub_agents.travel_info_gather.agent import root_agent as travel_info_gather_agent
+from travel_helper.sub_agents.weather.agent import root_agent as weather_agent
 
 instruction_prompt = """
     You're an agent to provide essential pre-departure information for a traveler.
