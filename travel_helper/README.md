@@ -10,7 +10,7 @@ Instead, let's build a travel helper agent! This agent gathers the necessary inf
 and provides essential pre-departure information you need for your trip.
 
 Travel Helper Agent will rely on other agents to help. Follow these steps to build the sub-agents and then combine
-them into a root agent,
+them into a root agent.
 
 Build sub-agents:
 * [Greeter Agent](#greeter-agent)
@@ -19,7 +19,10 @@ Build sub-agents:
 * [Currency Agent](#currency-agent)
 
 Build root-agent:
-* [Travel Helper Agent](#travel-helper-agent)
+* [Travel Helper Agent](#travel-helper-agent-1)
+
+Deploy root-agent:
+* [Deploy to Cloud Run](#deploy-to-cloud-run)
 
 ## Build sub-agents
 
@@ -66,7 +69,7 @@ the sub-agents.
 
 Take a look at the [agent.py](agent.py) for details. 
 
-### Run agent - terminal
+#### Run agent - terminal
 
 Outside the folder of the agent use `adk run`:
 
@@ -93,7 +96,7 @@ Visa required? No, Cypriots can stay in the UAE for 90 days without a visa.
 ...
 ```
 
-### Run your agent - web
+#### Run agent - web
 
 You can also launch the dev UI to interact with the agent.
 
@@ -110,6 +113,24 @@ Go to `http://0.0.0.0:8080`, choose your agent from the drop-down, and start cha
 
 ## Deploy root agent
 
-TODO
+ADK has a few [deployment options](https://google.github.io/adk-docs/deploy/): Vertex AI Agent Engine, Cloud Run, or 
+self managed.  
+
+### Deploy to Cloud Run
+
+Let's deploy the agent to Cloud Run with the dev UI enabled:
+
+```shell
+adk deploy cloud_run \
+  --project="your-project-id" \
+  --region="us-central1" \
+  --service_name="travel-helper-service" \
+  --with_ui \
+  ./travel_helper
+```
+
+This builds a container for the agent and deploys to Cloud Run. You can visit the default URL of the Cloud Run service
+to interact with the agent.
+
 
 

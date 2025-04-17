@@ -14,7 +14,7 @@ that uses a model and some simple instructions. No tools or no sub-agents.
 
 There are multiple ways to interact with your first agent.
 
-## Run your agent - terminal
+## Run agent - terminal
 
 Outside the folder of the agent use `adk run`:
 
@@ -36,7 +36,7 @@ user: Hi
 user: 
 ```
 
-## Run your agent - web
+## Run agent - web
 
 You can also launch the dev UI to interact with the agent.
 

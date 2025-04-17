@@ -8,7 +8,7 @@ as a tool.
  
 Take a look at the [agent.py](agent.py) for details. It's an agent that uses Google Search as a tool. 
 
-## Run your agent - terminal
+## Run agent - terminal
 
 Outside the folder of the agent use `adk run`:
 

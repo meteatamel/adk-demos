@@ -8,7 +8,7 @@ functions are used as tools in the agent.
 
 Take a look at the [agent.py](agent.py) for details. 
 
-## Run your agent - terminal
+## Run agent - terminal
 
 Outside the folder of the agent use `adk run`:
 
