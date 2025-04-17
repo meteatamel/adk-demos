@@ -2,7 +2,8 @@
 
 ## Introduction
 
-This agent greets the traveler and gathers the necessary information about the upcoming trip. 
+This agent greets the traveler and gathers the necessary information about the upcoming trip such as the nationality of
+the traveler, departure and arrival cities. 
 
 Take a look at the [agent.py](agent.py) for details. It's the simplest agent you can have in ADT: an agent
 that uses a model and some simple instructions. No tools or no sub-agents. 
@@ -49,4 +50,7 @@ Choose your agent from the drop-down and start chatting with your agent:
 
 ![ADK Web UI](images/adk-web-ui.png)
 
-Congratulations, your first agent is done! 
+---
+
+Congratulations, your first agent is done! Go back to [travel_helper](../../README.md) to continue building the rest of
+the agents.
