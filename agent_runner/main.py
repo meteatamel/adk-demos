@@ -3,16 +3,21 @@ import logging
 from google.adk.runners import Runner
 from google.adk.sessions import InMemorySessionService
 from google.genai.types import Content, Part
+
+import sys
+sys.path.append("../")
 from travel_helper.agent import root_agent as travel_helper_agent
 
 from dotenv import load_dotenv
 load_dotenv()
 
-APP_NAME = "adk_tutorial_app"
+APP_NAME = "agent_runner"
 USER_ID = "user_1"
 SESSION_ID = "session_1"
 
 logger = logging.getLogger(__name__)
+
+# An example that shows how to directly interact with an agent with a runner and a session.
 
 def setup_runner(agent):
     session_service = InMemorySessionService()
@@ -67,6 +72,7 @@ def pretty_print_event(event):
 
 
 def setup_logger():
+    #logger.setLevel(logging.INFO)
     logger.setLevel(logging.DEBUG)
     handler = logging.StreamHandler()
     formatter = logging.Formatter('%(message)s')

@@ -15,6 +15,7 @@ This repository is a collection of ADK samples/tutorials to get you up to speed.
 Follow the following sub-pages for samples/tutorials:
 
 * [Travel Helper Agent](./travel_helper)
+* [Agent runner](./agent_runner)
 
 ## References
 

@@ -9,20 +9,8 @@ Of course, you can search this information for every trip but that takes time an
 Instead, let's build a travel helper agent! This agent gathers the necessary information about the upcoming trip 
 and provides essential pre-departure information you need for your trip.
 
-Travel Helper Agent will rely on other agents to help. Follow these steps to build the sub-agents and then combine
-them into a root agent.
-
-Build sub-agents:
-* [Greeter Agent](#greeter-agent)
-* [Google Search Agent](#google-search-agent)
-* [Weather Agent](#weather-agent)
-* [Currency Agent](#currency-agent)
-
-Build root-agent:
-* [Travel Helper Agent](#travel-helper-agent-1)
-
-Deploy root-agent:
-* [Deploy to Cloud Run](#deploy-to-cloud-run)
+Travel Helper Agent will rely on other agents to help. Follow these steps to build the sub-agents, combine them into 
+a root agent, run and deploy the agent.
 
 ## Build sub-agents
 
@@ -69,9 +57,13 @@ the sub-agents.
 
 Take a look at the [agent.py](agent.py) for details. 
 
-#### Run agent - terminal
+## Run root agent
 
-Outside the folder of the agent use `adk run`:
+There are multiple ways to test and run the root agent.
+
+### Run agent - CLI
+
+You can use `adk run` to interact with the agent from a provided CLI interface: 
 
 ```shell
 adk run ./travel_helper
@@ -96,9 +88,9 @@ Visa required? No, Cypriots can stay in the UAE for 90 days without a visa.
 ...
 ```
 
-#### Run agent - web
+### Run agent - web
 
-You can also launch the dev UI to interact with the agent.
+You can use `adk web` to interact with the agent from a provided Web UI
 
 Outside the folder of the agent use `adk web`:
 
@@ -110,11 +102,17 @@ Go to `http://0.0.0.0:8080`, choose your agent from the drop-down, and start cha
 
 ![ADK Web UI](images/adk-webui-travel-helper.png)
 
+### Run agent - programatically
+
+`adk run` and `adk web` are great for development and testing, but at some point, you need to interact with the agent
+programmatically. This typically involves creating a runner with a session and the agent.
+
+Take a look at the [agent_runner](../agent_runner) for details on how you can set this up. 
 
 ## Deploy root agent
 
 ADK has a few [deployment options](https://google.github.io/adk-docs/deploy/): Vertex AI Agent Engine, Cloud Run, or 
-self managed.  
+self-managed.  
 
 ### Deploy to Cloud Run
 
