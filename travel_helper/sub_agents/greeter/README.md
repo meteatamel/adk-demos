@@ -46,9 +46,9 @@ Outside the folder of the agent use `adk web`:
 adk web
 ```
 
-Choose your agent from the drop-down and start chatting with your agent:
+Go to `http://0.0.0.0:8080`, choose your agent from the drop-down, and start chatting with your agent:
 
-![ADK Web UI](images/adk-web-ui.png)
+![ADK Web UI](images/adk-webui-greeter.png)
 
 ---
 

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This agent provides some useful information to the travel such as the entry rules to destination country, how to
+This agent provides some useful information to the traveler such as the entry rules to destination country, how to
 get from the airport to the city center, and top tourist attractions in the destination city. It uses Google Search
 as a tool.
  
