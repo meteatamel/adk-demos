@@ -116,7 +116,17 @@ self-managed.
 
 ### Deploy to Cloud Run
 
-Let's deploy the agent to Cloud Run with the dev UI enabled:
+Let's deploy the agent to Cloud Run with the dev UI enabled. 
+
+First make sure the necessary APIs are enabled:
+
+```shell
+gcloud services enable artifactregistry.googleapis.com \
+  cloudbuild.googleapis.com \
+  run.googleapis.com
+```
+
+Then, deploy using the `adk` tool:
 
 ```shell
 adk deploy cloud_run \
