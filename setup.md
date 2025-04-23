@@ -54,7 +54,7 @@ source .venv/bin/activate
 Install ADK:
 
 ```shell
-pip install google-adk
+pip install -r requirements.txt
 ```
 
 ## Configure Google AI or Vertex AI 

@@ -1,6 +1,7 @@
 import logging
 import requests
 from google.adk.agents import Agent
+from ...libs import constants
 
 logger = logging.getLogger(__name__)
 
@@ -42,7 +43,7 @@ instruction_prompt = """
 
 root_agent = Agent(
     name="currency_agent",
-    model="gemini-2.0-flash",
+    model=constants.MODEL,
     description="Agent to convert from one currency to another.",
     instruction=instruction_prompt,
     tools=[convert_currency]

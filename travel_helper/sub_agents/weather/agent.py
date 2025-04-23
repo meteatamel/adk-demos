@@ -1,6 +1,7 @@
 from google.adk.agents import Agent
 import logging
 import requests
+from ...libs import constants
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -59,7 +60,7 @@ instruction_prompt = """
 
 root_agent = Agent(
     name="weather_agent",
-    model="gemini-2.0-flash",
+    model=constants.MODEL,
     description="Agent to answer questions about weather in a city.",
     instruction=instruction_prompt,
     tools=[location_to_lat_long, lat_long_to_weather]

@@ -1,5 +1,6 @@
 from google.adk.agents import Agent
 from google.adk.tools.agent_tool import AgentTool
+from .libs import constants
 from travel_helper.sub_agents.currency.agent import root_agent as currency_agent
 from travel_helper.sub_agents.google_search.agent import root_agent as google_search_agent
 from travel_helper.sub_agents.greeter.agent import root_agent as greeter_agent
@@ -50,7 +51,7 @@ instruction_prompt = """
 """
 root_agent = Agent(
     name="travel_helper_agent",
-    model="gemini-2.0-flash",
+    model=constants.MODEL,
     description="Travel helper agent to provide essential pre-departure information for a traveler",
     instruction=instruction_prompt,
     # sub_agents=[greeter_agent, google_search_agent, weather_agent, currency_agent]
