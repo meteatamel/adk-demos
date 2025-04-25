@@ -1,5 +1,4 @@
 from google.adk.agents import Agent
-from ...libs import constants
 
 instruction_prompt = """
     You're the greeter agent. Your task is to greet the traveler and then find out the following travel information:
@@ -10,7 +9,7 @@ instruction_prompt = """
 
 root_agent = Agent(
     name="greeter_agent",
-    model=constants.MODEL,
+    model="gemini-2.0-flash",
     description="An agent to greet the user and ask for the nationality, cities they are travelling from and to.",
     instruction=instruction_prompt
 )
