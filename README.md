@@ -25,6 +25,7 @@ Follow the following sub-pages for samples/tutorials:
 * [Blog: From Zero to Multi-Agents: A Beginner’s Guide to Google Agent Development Kit (ADK)](https://medium.com/@sokratis.kartakis/from-zero-to-multi-agents-a-beginners-guide-to-google-agent-development-kit-adk-b56e9b5f7861)
 * [GitHub: Google ADK Walkthrough: Your Step-by-Step Development Tutorial](https://github.com/sokart/adk-walkthrough/tree/main)
 * [Blog: Agent Development Kit: Making it easy to build multi-agent applications](https://developers.googleblog.com/en/agent-development-kit-easy-to-build-multi-agent-applications/)
+* [Awesome Google ADK](https://github.com/tsubasakong/awesome-google-adk)
 
 -------
 
