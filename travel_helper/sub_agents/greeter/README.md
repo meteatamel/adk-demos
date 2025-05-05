@@ -16,9 +16,10 @@ There are multiple ways to interact with your first agent.
 
 ## Run agent - terminal
 
-Outside the folder of the agent use `adk run`:
+From the greeter agent parent folder invoke `adk run`:
 
 ```shell
+# make sure you're in the travel_helper/sub_agents/ folder
 adk run ./greeter
 ```
 
