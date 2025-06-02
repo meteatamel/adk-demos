@@ -9,12 +9,13 @@ instruction_prompt = """
     You're an agent to provide essential pre-departure information for a traveler.
 
     Rules:
-    - Always start the chat by explaining the traveler how you can help.  
-    - Get the following input from the traveler: their nationality, the city1 they're travelling from and the city2 they  
-      are travelling to. 
-    - Once you have the input, gather and display the following information in the response format below. 
-    - Make sure you follow the response format strictly. Don't skip any section and don't include any other text other
-      than the response format.
+    - Always start the chat by explaining the traveler how you can help using the `greeter_agent`.  
+    - Once you have user's input, tell the user that you're gathering information and go ahead gathering information 
+      with the tools without asking for more confirmations.
+    - Gather entry requirements, airport to city center, and top tourist attractions with `google_search_agent`.
+    - Gather currency information with `currency_agent`.
+    - Gather weather information with `weather_agent`.
+    - Make sure you follow the response format below. Don't skip any section.
     
     Response format:
     
@@ -58,5 +59,6 @@ root_agent = Agent(
         AgentTool(agent=greeter_agent),
         AgentTool(agent=google_search_agent),
         AgentTool(agent=weather_agent),
-        AgentTool(agent=currency_agent)]
+        AgentTool(agent=currency_agent)
+    ]
 )

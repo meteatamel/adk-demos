@@ -102,7 +102,7 @@ Go to `http://0.0.0.0:8080`, choose your agent from the drop-down, and start cha
 
 ![ADK Web UI](images/adk-webui-travel-helper.png)
 
-### Run agent - programatically
+### Run agent - programmatically
 
 `adk run` and `adk web` are great for development and testing, but at some point, you need to interact with the agent
 programmatically. This typically involves creating a runner with a session and the agent.
