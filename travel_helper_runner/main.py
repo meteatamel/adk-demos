@@ -19,9 +19,9 @@ logger = logging.getLogger(__name__)
 
 # An example that shows how to directly interact with an agent with a runner and a session.
 
-def setup_runner(agent):
+async def setup_runner(agent):
     session_service = InMemorySessionService()
-    session_service.create_session(
+    await session_service.create_session(
         app_name=APP_NAME,
         user_id=USER_ID,
         session_id=SESSION_ID
@@ -50,9 +50,9 @@ async def call_agent(runner, query):
           elif event.actions and event.actions.escalate:
              response_text = f"Agent escalated: {event.error_message or 'No specific message.'}"
           break # Stop processing events once the final response is found
-      else:
-          if event.content and event.content.parts and event.content.parts[0].text:
-              response_text += event.content.parts[0].text
+      # else:
+      #     if event.content and event.content.parts and event.content.parts[0].text:
+      #         response_text += event.content.parts[0].text
 
   print(f"<<< Agent: {response_text}")
 
@@ -81,7 +81,7 @@ def setup_logger():
 
 
 async def main():
-    runner = setup_runner(travel_helper_agent)
+    runner = await setup_runner(travel_helper_agent)
 
     print("Welcome! Start chatting with the agent. Type 'exit' to end.")
     while True:
