@@ -10,6 +10,6 @@ instruction_prompt = """
 root_agent = Agent(
     name="greeter_agent",
     model="gemini-2.0-flash",
-    description="An agent to greet the user and ask for the nationality, cities they are travelling from and to.",
+    description="An agent to greet the user and ask for some basic information about the travel.",
     instruction=instruction_prompt
 )
