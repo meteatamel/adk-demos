@@ -36,5 +36,5 @@ Let's see how we can start evaluating some of the sub-agents.
 
 ## Greeter Agent Evaluation
 
-Follow [Greeter Agent Evaluation](../sub_agents/greeter/eval] to see how to evaluate the agent.
+Follow [Greeter Agent Evaluation](../sub_agents/greeter/eval) to see how to evaluate the agent.
 
