@@ -32,7 +32,15 @@ Currently these are the available criteria:
 }
 ```
 
-Let's see how we can start evaluating some of the sub-agents. 
+Let's see how we can start evaluating some of the sub-agents.
+
+## Setup
+
+Make sure the eval package is installed:
+
+```shell
+pip install google-adk[eval]
+```
 
 ## Greeter Agent Evaluation
 
