@@ -56,4 +56,4 @@ the agents.
 
 ## Optional: Evaluate agent
 
-It might be too early but you can also see how to evaluate the agent responses in [eval](./eval).
+You can also see how to evaluate the agent responses in [eval](./eval).

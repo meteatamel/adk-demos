@@ -1,0 +1,70 @@
+{
+  "eval_set_id": "test",
+  "name": "test",
+  "description": null,
+  "eval_cases": [
+    {
+      "eval_id": "case_gbp_usd",
+      "conversation": [
+        {
+          "invocation_id": "e-c5004188-48ee-4e88-87d4-54bba7e3706c",
+          "user_content": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "Convert British Pounds to US Dollars"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "1 British Pounds (GBP) = 1.3497 US Dollars (USD)\n"
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "id": "adk-80728a77-a7f7-494c-8d62-16d1f13b7d58",
+                "args": {
+                  "to_currency": "USD",
+                  "from_currency": "GBP"
+                },
+                "name": "convert_currency"
+              }
+            ],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 1748967094.523667
+        }
+      ],
+      "session_input": {
+        "app_name": "currency",
+        "user_id": "user",
+        "state": {}
+      },
+      "creation_timestamp": 1748967358.2571032
+    }
+  ],
+  "creation_timestamp": 1748967190.8885891
+}

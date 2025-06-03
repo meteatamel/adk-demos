@@ -1,13 +1,13 @@
 {
-  "eval_set_id": "greeter",
-  "name": "greeter",
+  "eval_set_id": "test",
+  "name": "test",
   "description": null,
   "eval_cases": [
     {
       "eval_id": "case1",
       "conversation": [
         {
-          "invocation_id": "e-1b4ed779-9f47-45ec-a704-6c648aedd556",
+          "invocation_id": "e-c9ea4702-90d4-4709-8211-e8967aea3f4c",
           "user_content": {
             "parts": [
               {
@@ -37,7 +37,7 @@
                 "executable_code": null,
                 "function_call": null,
                 "function_response": null,
-                "text": "Hello there! Welcome!\n\nTo help me find the best travel options for you, could you please tell me:\n\n*   What is your nationality?\n*   Which city are you traveling from?\n*   Which city are you traveling to?\n"
+                "text": "Hello there! I'm here to help you plan your trip. To get started, could you please tell me:\n\n1.  What is your nationality?\n2.  Which city are you traveling from?\n3.  Which city are you traveling to?\n"
               }
             ],
             "role": null
@@ -46,7 +46,7 @@
             "tool_uses": [],
             "intermediate_responses": []
           },
-          "creation_timestamp": 1748961290.278207
+          "creation_timestamp": 1748966770.08714
         }
       ],
       "session_input": {
@@ -54,8 +54,8 @@
         "user_id": "user",
         "state": {}
       },
-      "creation_timestamp": 1748961907.4010072
+      "creation_timestamp": 1748966778.775063
     }
   ],
-  "creation_timestamp": 1748961762.039472
+  "creation_timestamp": 1748966761.828172
 }

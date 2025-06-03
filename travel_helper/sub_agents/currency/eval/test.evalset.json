@@ -1,0 +1,132 @@
+{
+  "eval_set_id": "currency",
+  "name": "currency",
+  "description": null,
+  "eval_cases": [
+    {
+      "eval_id": "case_gbp_usd",
+      "conversation": [
+        {
+          "invocation_id": "e-a19577ef-e8c4-43a7-8703-ec095cb863f1",
+          "user_content": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "Convert British Pounds to US Dollars"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "1 British Pounds (GBP) = 1.3497 US Dollars (USD)\n"
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "id": "adk-4eb69657-685b-4c0a-923f-928dda5f876f",
+                "args": {
+                  "to_currency": "USD",
+                  "from_currency": "GBP"
+                },
+                "name": "convert_currency"
+              }
+            ],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 1748966306.970312
+        }
+      ],
+      "session_input": {
+        "app_name": "currency",
+        "user_id": "user",
+        "state": {}
+      },
+      "creation_timestamp": 1748966321.496045
+    },
+    {
+      "eval_id": "case_gbp_aed",
+      "conversation": [
+        {
+          "invocation_id": "e-c3a245cb-a672-4b60-81a8-7827b059f50b",
+          "user_content": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "Convert British Pounds to UAE Dirhams"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "I'm sorry, I cannot convert from GBP to AED"
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "id": "adk-67cd3a85-53d8-44d9-8dd7-5a78e4e17409",
+                "args": {
+                  "to_currency": "AED",
+                  "from_currency": "GBP"
+                },
+                "name": "convert_currency"
+              }
+            ],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 1748966349.280951
+        }
+      ],
+      "session_input": {
+        "app_name": "currency",
+        "user_id": "user",
+        "state": {}
+      },
+      "creation_timestamp": 1748966364.059058
+    }
+  ],
+  "creation_timestamp": 1748966297.72655
+}
