@@ -1,0 +1,61 @@
+{
+  "eval_set_id": "greeter",
+  "name": "greeter",
+  "description": null,
+  "eval_cases": [
+    {
+      "eval_id": "case1",
+      "conversation": [
+        {
+          "invocation_id": "e-1b4ed779-9f47-45ec-a704-6c648aedd556",
+          "user_content": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "Hi"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "Hello there! Welcome!\n\nTo help me find the best travel options for you, could you please tell me:\n\n*   What is your nationality?\n*   Which city are you traveling from?\n*   Which city are you traveling to?\n"
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": {
+            "tool_uses": [],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 1748961290.278207
+        }
+      ],
+      "session_input": {
+        "app_name": "greeter",
+        "user_id": "user",
+        "state": {}
+      },
+      "creation_timestamp": 1748961907.4010072
+    }
+  ],
+  "creation_timestamp": 1748961762.039472
+}

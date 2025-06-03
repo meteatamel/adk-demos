@@ -1,3 +1,6 @@
+# Ignore ADK eval
+.adk
+
 # Ignore PyCharm
 .idea
 

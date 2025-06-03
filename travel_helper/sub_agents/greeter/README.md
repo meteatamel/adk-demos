@@ -51,7 +51,9 @@ Go to `http://0.0.0.0:8080`, choose your agent from the drop-down, and start cha
 
 ![ADK Web UI](images/adk-webui-greeter.png)
 
----
-
 Congratulations, your first agent is done! Go back to [travel_helper](../../README.md) to continue building the rest of
 the agents.
+
+## Optional: Evaluate agent
+
+It might be too early but you can also see how to evaluate the agent responses in [eval](./eval).

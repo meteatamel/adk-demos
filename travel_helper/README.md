@@ -100,7 +100,7 @@ adk web
 
 Go to `http://0.0.0.0:8080`, choose your agent from the drop-down, and start chatting with your agent:
 
-![ADK Web UI](images/adk-webui-travel-helper.png)
+![ADK Web UI](docs/images/adk-webui-travel-helper.png)
 
 ### Run agent - programmatically
 
@@ -140,5 +140,6 @@ adk deploy cloud_run \
 This builds a container for the agent and deploys to Cloud Run. You can visit the default URL of the Cloud Run service
 to interact with the agent.
 
+## Evaluate Agents
 
-
+Let's now see how to evaluate agents and make sure they behave as you expect in [evaluate_agents](./docs/evaluate_agents.md).
