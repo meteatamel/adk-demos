@@ -11,13 +11,23 @@ from travel_helper.agent import root_agent as travel_helper_agent
 from dotenv import load_dotenv
 load_dotenv()
 
+# Setup module logging.
+logger = logging.getLogger("travel_helper_runner")
+#logger.setLevel(logging.INFO)
+logger.setLevel(logging.DEBUG)
+logger.propagate = False
+handler = logging.StreamHandler()
+formatter = logging.Formatter('%(levelname)s:%(name)s:%(message)s')
+handler.setFormatter(formatter)
+logger.addHandler(handler)
+
+# Enable root level logging for library logs
+#logging.basicConfig(level=logging.INFO)
+
+# An example that shows how to directly interact with an agent with a runner and a session.
 APP_NAME = "agent_runner"
 USER_ID = "user_1"
 SESSION_ID = "session_1"
-
-logger = logging.getLogger(__name__)
-
-# An example that shows how to directly interact with an agent with a runner and a session.
 
 async def setup_runner(agent):
     session_service = InMemorySessionService()
@@ -26,14 +36,14 @@ async def setup_runner(agent):
         user_id=USER_ID,
         session_id=SESSION_ID
     )
-    print(f"Session created: App='{APP_NAME}', User='{USER_ID}', Session='{SESSION_ID}'")
+    logger.info(f"Session created: App='{APP_NAME}', User='{USER_ID}', Session='{SESSION_ID}'")
 
     runner = Runner(
         agent=agent,
         app_name=APP_NAME,
         session_service=session_service
     )
-    print(f"Runner created for agent '{runner.agent.name}'.")
+    logger.info(f"Runner created: Agent='{runner.agent.name}'")
     return runner
 
 
@@ -71,14 +81,6 @@ def pretty_print_event(event):
             logger.debug(f"  ==> func_response: {func_response.name}, response: {func_response.response}")
 
 
-def setup_logger():
-    logger.setLevel(logging.INFO)
-    #logger.setLevel(logging.DEBUG)
-    handler = logging.StreamHandler()
-    formatter = logging.Formatter('%(message)s')
-    handler.setFormatter(formatter)
-    logger.addHandler(handler)
-
 
 async def main():
     runner = await setup_runner(travel_helper_agent)
@@ -93,5 +95,4 @@ async def main():
 
 
 if __name__ == '__main__':
-    setup_logger()
     asyncio.run(main())
