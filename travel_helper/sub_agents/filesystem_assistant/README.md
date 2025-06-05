@@ -22,26 +22,28 @@ Take a look at the [agent.py](agent.py) for details.
 
 Before running the travel helper with filesystem agent: 
 
-1- In [agent.py](agent.py), change the `TARGET_FOLDER_PATH` to a location in your system. 
+1- In [agent.py](agent.py), change the `TARGET_FOLDER_PATH` to a location in your system.
+
 2- In the root [agent.py](../../agent.py), uncomment this line to change the instruction prompt to use the filesystem agent:
    ```
    # instruction=instruction_prompt + instruction_prompt_for_filesystem + response_format,
    ```
 
-Outside the folder of the agent use `adk run`:
+Now, run the travel helper:
 
 ```shell
-adk run ./weather
+adk run ./travel_helper
 ```
 
-Ask about weather for different cities:
+After generating the travel information, you can ask it to save to a file:
 
 ```shell
-user: How's the weather in Dubai?
-[weather_agent]: For the next 7 days, the weather in Dubai will be:
-* Temperature: Min temperature between 21.1-24.5°C and Max temperature between 29.4-40.9°C
-* Rain: There is 0 rain
-* Wind: Max wind speed between 16-29.3km/h
-* UV index: Max UV index between 8.3-8.7
+...
+----------------
+Enjoy your trip!
+
+[user]: Can you save the information to a file?
+Allowed directories: [ '/Users/atamel/Desktop' ]
+[travel_helper_agent]: OK. I have saved the information to the file `/Users/atamel/Desktop/dubai_trip_summary.txt`.
 ```
 
