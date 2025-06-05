@@ -21,8 +21,8 @@ instruction_prompt = """
 
 # If running locally, you can also have file system access to save the information
 instruction_prompt_for_filesystem = """
-    - Once all the information is generated, ask the user if they want to save the generated travel information to a file.
-    If so, use `filesystem_assistant_agent` to save the information in a file.
+    - Once all the information is generated, ask the user if they want to save the pre-departure information to a file.
+    If so, use `filesystem_assistant_agent` to save it in a file. Make sure to preserve the response format.
 """
 
 response_format = """
