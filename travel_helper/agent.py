@@ -4,6 +4,7 @@ from travel_helper.sub_agents.currency.agent import root_agent as currency_agent
 from travel_helper.sub_agents.google_search.agent import root_agent as google_search_agent
 from travel_helper.sub_agents.greeter.agent import root_agent as greeter_agent
 from travel_helper.sub_agents.weather.agent import root_agent as weather_agent
+from travel_helper.sub_agents.filesystem_assistant.agent import root_agent as filesystem_assistant_agent
 
 instruction_prompt = """
     You're an agent to provide essential pre-departure information for a traveler.
@@ -16,7 +17,15 @@ instruction_prompt = """
     - Gather currency information with `currency_agent`.
     - Gather weather information with `weather_agent`.
     - Make sure you follow the response format below. Don't skip any section.
-    
+ """
+
+# If running locally, you can also have file system access to save the information
+instruction_prompt_for_filesystem = """
+    - Once all the information is generated, if the user asks to save the information, use `filesystem_assistant_agent`
+      to save the information in a file.
+"""
+
+response_format = """
     Response format:
     
     SUMMARY
@@ -49,16 +58,20 @@ instruction_prompt = """
     ----------------
     Enjoy your trip!
 """
+
 root_agent = Agent(
     name="travel_helper_agent",
     model="gemini-2.0-flash",
     description="Travel helper agent to provide essential pre-departure information for a traveler",
-    instruction=instruction_prompt,
-    # sub_agents=[greeter_agent, google_search_agent, weather_agent, currency_agent]
+    instruction=instruction_prompt + response_format,
+    # If running locally, you can also have file system access to save the information
+    # instruction=instruction_prompt + instruction_prompt_for_filesystem + response_format,
     tools=[
         AgentTool(agent=greeter_agent),
         AgentTool(agent=google_search_agent),
         AgentTool(agent=weather_agent),
-        AgentTool(agent=currency_agent)
+        AgentTool(agent=currency_agent),
+        AgentTool(agent=filesystem_assistant_agent)
     ]
+    # sub_agents=[greeter_agent, google_search_agent, weather_agent, currency_agent]
 )

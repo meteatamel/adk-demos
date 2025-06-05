@@ -143,3 +143,11 @@ to interact with the agent.
 ## Evaluate Agents
 
 Let's now see how to evaluate agents and make sure they behave as you expect in [evaluate_agents](./docs/evaluate_agents.md).
+
+## Filesystem Assistant Agent with Model Context Protocol
+
+If you're running the agent locally, you might want to save the travel information in a text file. 
+
+Go through [filesystem_assistant](./sub_agents/filesystem_assistant) to build an agent to have access to the file system
+using a reference MCP server and ADK's MCPToolset.
+
