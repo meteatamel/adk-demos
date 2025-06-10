@@ -33,9 +33,9 @@ You should see a call to `convert_currency` tool and get a response like this:
 
 Save this as an evaluation case in a new evaluation set:
 
-1- Go to `Eval` tab.
-2- Select `Create Evaluation Set` and give it a name `test`. This creates a `test.evalset.json` file.
-3- Click on the `test` eval set, select `Add current session to greeter`, and give the eval case a name `case_gbp_usd`. 
+1. Go to `Eval` tab.
+2. Select `Create Evaluation Set` and give it a name `test`. This creates a `test.evalset.json` file.
+3. Click on the `test` eval set, select `Add current session to greeter`, and give the eval case a name `case_gbp_usd`. 
 
 At this point, you should have eval case `case_gbp_usd` added to the eval set `test.evalset.json`.
 

@@ -31,9 +31,9 @@ Which city are you traveling to?
 
 This is actually a perfect response that we can save as an evaluation as follows:
 
-1- Go to `Eval` tab.
-2- Select `Create Evaluation Set` and give it a name `test`. This creates a `test.evalset.json` file.
-3- Click on the `test` eval set, select `Add current session to greeter`, and give the eval case a name `case1`. 
+1. Go to `Eval` tab.
+2. Select `Create Evaluation Set` and give it a name `test`. This creates a `test.evalset.json` file.
+3. Click on the `test` eval set, select `Add current session to greeter`, and give the eval case a name `case1`. 
 
 At this point, you should have eval case `case1` added to the eval set `test.evalset.json`.
 
