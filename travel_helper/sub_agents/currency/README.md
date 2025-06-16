@@ -29,8 +29,10 @@ user: currency from France to Brazil
 [currency_agent]: 1 Euros (EUR) = 6.6671 Brazilian Real (BRL)
 ```
 
-Nice! Go back to [travel_helper](../../README.md) to continue building the rest of the agents.
-
 ## Optional: Evaluate agent
 
 You can also see how to evaluate the agent responses in [eval](./eval).
+
+---
+
+Go back to [sub_agents](../README.md) to continue building the rest of the agents.

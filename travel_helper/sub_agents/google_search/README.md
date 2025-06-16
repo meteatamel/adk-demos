@@ -30,4 +30,4 @@ Other popular attractions include the Palm Jumeirah, a man-made island with luxu
 
 ---
 
-Nice! Go back to [travel_helper](../../README.md) to continue building the rest of the agents.
+Go back to [sub_agents](../README.md) to continue building the rest of the agents.
