@@ -140,6 +140,36 @@ adk deploy cloud_run \
 This builds a container for the agent and deploys to Cloud Run. You can visit the default URL of the Cloud Run service
 to interact with the agent.
 
+### Deploy to Vertex AI Agent Engine
+
+Let's deploy the agent to Vertex AI Agent.
+
+First, make sure the agent engine libraries are installed:
+
+```shell
+pip install 'google-cloud-aiplatform[agent_engines]'
+```
+
+Create a staging bucket for the agent engine:
+
+```shell
+PROJECT_ID=your-project-id
+STAGING_BUCKET=gs://$PROJECT_ID-agent-engine-staging
+gsutil mb $STAGING_BUCKET
+```
+
+Deploy using the `adk` tool:
+
+```shell
+adk deploy agent_engine \
+  --project $PROJECT_ID \
+  --region us-central1 \
+  --display_name travel-helper-agent \
+  --staging_bucket $STAGING_BUCKET \
+  --trace_to_cloud \
+  ./travel_helper
+```
+
 ## Evaluate Agents
 
 Let's now see how to evaluate agents and make sure they behave as you expect in [evaluate_agents](./docs/evaluate_agents.md).
