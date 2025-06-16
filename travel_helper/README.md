@@ -142,6 +142,10 @@ to interact with the agent.
 
 ### Deploy to Vertex AI Agent Engine
 
+> [!CAUTION]
+> There's currently a bug in `adk deploy agent_engine` with relative imports that prevents travel_helper
+> being deployed to Agent Engine. Once that's solved, instructions here should just work.
+
 Let's deploy the agent to Vertex AI Agent.
 
 First, make sure the agent engine libraries are installed:
