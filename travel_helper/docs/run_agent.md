@@ -41,7 +41,7 @@ adk web
 
 Go to `http://0.0.0.0:8080`, choose your agent from the drop-down, and start chatting with your agent:
 
-![ADK Web UI](docs/images/adk-webui-travel-helper.png)
+![ADK Web UI](images/adk-webui-travel-helper.png)
 
 # Run agent - programmatically
 
