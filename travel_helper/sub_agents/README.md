@@ -1,4 +1,4 @@
-# Travel Helper Agent - Build sub-agents
+# Travel Helper Agent - sub-agents
 
 Go through these steps to build the sub-agents. 
 
@@ -9,7 +9,7 @@ of the traveler, departure and arrival cities.
 
 That's what this agent is for!
 
-Go through [greeter](./greeter) to build the agent. 
+Go through [Greeter Agent](./greeter) to build the agent. 
 
 ## Google Search Agent
 
@@ -18,7 +18,7 @@ get from the airport to the city center, and top tourist attractions in the dest
 
 Google Search is great for this kind of information and it's available as a tool to ADK.
 
-Go through [google_search](./google_search) to build an agent using Google Search.
+Go through [Google Search Agent](./google_search) to build an agent using Google Search.
 
 ## Weather Agent
 
@@ -27,15 +27,15 @@ but it's also possible to ask Weather APIs for more precise weather information.
 
 You can have functions calling any API as tools in ADK.
 
-Go through [weather](./weather) to build an agent using Weather APIs.
+Go through [Weather Agent](./weather) to build an agent using Weather APIs.
 
 ### Currency Agent
 
 Another useful information to know is the currency of the destination country and the currency rate between the home
 country and the destination country. That's what the currency agent is for!
 
-Go through [currency](./currency) to build an agent using a currency API to convert between currencies.
+Go through [Currency Agent](./currency) to build an agent using a currency API to convert between currencies.
 
 ---
 
-Go back to [travel_helper](../README.md) to continue building the root agent.
+Go back to [Travel Helper Agent](../README.md) to continue building the root agent.

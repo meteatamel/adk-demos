@@ -29,4 +29,4 @@ user: How's the weather in Dubai?
 
 ---
 
-Go back to [sub_agents](../README.md) to continue building the rest of the agents.
+Go back to [Travel Helper Agent - sub-agents](../README.md) to continue building the rest of the agents.

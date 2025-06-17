@@ -52,4 +52,4 @@ Take a look at the [travel_helper_runner](../../travel_helper_runner) for detail
 
 ---
 
-Go back to [travel_helper](../README.md) to continue.
+Go back to [Travel Helper Agent](../README.md) to continue.
