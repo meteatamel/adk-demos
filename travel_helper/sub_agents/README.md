@@ -29,7 +29,7 @@ You can have functions calling any API as tools in ADK.
 
 Go through [Weather Agent](./weather) to build an agent using Weather APIs.
 
-### Currency Agent
+## Currency Agent
 
 Another useful information to know is the currency of the destination country and the currency rate between the home
 country and the destination country. That's what the currency agent is for!
