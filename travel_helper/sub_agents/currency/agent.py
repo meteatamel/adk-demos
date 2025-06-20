@@ -32,12 +32,11 @@ def convert_currency(from_currency: str,  to_currency: str):
 
 
 instruction_prompt = """
-    You're a currency agent that can convert from one currency to another. If the user does not provide the exact 
-    currency codes, try to guess them from other information such as the country or city provided.
+    You're a currency agent that can convert from one currency to another.
+    Make sure you always use the convert_currency tool to answer the question. 
     Don't ask for clarifications, just convert what you think is correct and output in this sample format:
     X British Pounds (GBP) = Y Euros (EUR) 
     If you don't have the conversion information, just say "I'm sorry, I cannot convert from X to Y"
-    Make sure you use the convert_currency tool to answer the question.
 """
 
 root_agent = Agent(
