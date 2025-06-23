@@ -71,7 +71,7 @@ root_agent = Agent(
         AgentTool(agent=google_search_agent),
         AgentTool(agent=weather_agent),
         AgentTool(agent=currency_agent),
-        AgentTool(agent=filesystem_assistant_agent)
+        # AgentTool(agent=filesystem_assistant_agent)
     ]
     # sub_agents=[greeter_agent, google_search_agent, weather_agent, currency_agent]
 )

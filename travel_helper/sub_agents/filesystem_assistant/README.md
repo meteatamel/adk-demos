@@ -28,6 +28,10 @@ Before running the travel helper with filesystem agent:
    ```
    # instruction=instruction_prompt + instruction_prompt_for_filesystem + response_format,
    ```
+3- In the root [agent.py](../../agent.py), uncomment this line to include the filesystem agent in the tools:
+   ```
+   # AgentTool(agent=filesystem_assistant_agent)
+   ```
 
 Now, run the travel helper:
 
