@@ -7,7 +7,7 @@ and deploying AI agents.
 
 This repository is a collection of ADK samples/tutorials to get you up to speed. 
 
-> [!IMPORTANT]  
+> [!CAUTION]  
 > Before you start, make sure to follow the [setup](setup.md) page.
 
 ## Samples

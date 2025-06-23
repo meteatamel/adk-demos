@@ -9,6 +9,9 @@ creating a runner with a session and the agent.
 
 Take a look at the [main.py](main.py) for details.
 
+> [!CAUTION]  
+> Before you start, make sure to follow the [setup](../setup.md) page.
+
 ## Run
 
 Run the agent runner with [travel_helper](../travel_helper) agent.

@@ -9,6 +9,9 @@ Of course, you can search this information for every trip but that takes time an
 Instead, let's build a travel helper agent! This agent gathers the necessary information about the upcoming trip 
 and provides essential pre-departure information you need for your trip.
 
+> [!CAUTION]  
+> Before you start, make sure to follow the [setup](../setup.md) page.
+
 ## Build sub-agents
 
 Travel Helper Agent will rely on sub-agents to help. 
