@@ -3,11 +3,11 @@
 <img src="https://github.com/google/adk-docs/blob/main/docs/assets/agent-development-kit.png" alt="Agent Development Kit Logo" width="150">
 
 [Agent Development Kit](https://github.com/google/adk-python) (ADK) is an open-source toolkit for building, evaluating,
-and deploying AI agents. 
+and deploying AI agents.
 
-This repository is a collection of ADK samples/tutorials to get you up to speed. 
+This repository is a collection of ADK samples/tutorials to get you up to speed.
 
-> [!CAUTION]  
+> [!CAUTION]
 > Before you start, make sure to follow the [setup](setup.md) page.
 
 ## Samples
@@ -16,6 +16,7 @@ Follow the following sub-pages for samples/tutorials (in order):
 
 * [Travel Helper Agent](./travel_helper)
 * [Travel Helper Agent Runner](./travel_helper_runner) (depends on the above)
+* [ADK Callbacks Demo Agent](./adk-callbacks-agent/)
 
 ## References
 
