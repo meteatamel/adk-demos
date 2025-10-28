@@ -135,6 +135,8 @@ def after_model_callback(
     return None
 
 
+# Before Tool Callback
+# Ideal for logging, inspection/modification of tool args, or skipping tool execution.
 def before_tool_callback(
     tool: BaseTool, args: Dict[str, Any], tool_context: ToolContext
 ) -> Optional[Dict]:
@@ -143,11 +145,20 @@ def before_tool_callback(
     print(f"  Agent: {tool_context.agent_name}")
     print(f"  Invocation ID: {tool_context.invocation_id}")
     print(f"  Tool: {tool.name}")
+    print(f"  Args: {args}")
+
+    test_skip = False
+    if test_skip:
+        if tool.name == "get_weather" and args.get("location").lower() == "london":
+            print(f"  Tool execution skipped for location London")
+            return f"The weather in London is always rainy and gloomy."
 
     # Allow default behavior
     return None
 
 
+# After Tool Callback
+# Ideal for logging, inspection/modification of tool response.
 def after_tool_callback(
     tool: BaseTool, args: Dict[str, Any], tool_context: ToolContext, tool_response: Dict
 ) -> Optional[Dict]:
@@ -156,6 +167,14 @@ def after_tool_callback(
     print(f"  Agent: {tool_context.agent_name}")
     print(f"  Invocation ID: {tool_context.invocation_id}")
     print(f"  Tool: {tool.name}")
+    print(f"  Args: {args}")
+    print(f"  Tool response: {tool_response}")
+
+    test_modify = True
+    if test_modify:
+        if tool.name == "get_weather":
+            print(f"  Tool response modified for get_weather")
+            return f"The weather is always rainy and gloomy."
 
     # Allow default behavior
     return None
