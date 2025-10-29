@@ -1,4 +1,4 @@
-# ADK Callbacks Demo Agent
+# ADK Callbacks Agent
 
 This is a sample agent that shows different callbacks in ADK:
 

@@ -16,7 +16,7 @@ Follow the following sub-pages for samples/tutorials (in order):
 
 * [Travel Helper Agent](./travel_helper)
 * [Travel Helper Agent Runner](./travel_helper_runner) (depends on the above)
-* [ADK Callbacks Demo Agent](./adk-callbacks-agent/)
+* [ADK Callbacks Agent](./adk-callbacks-agent/)
 
 ## References
 
