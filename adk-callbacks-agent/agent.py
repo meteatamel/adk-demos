@@ -21,13 +21,13 @@ def before_agent_callback(callback_context: CallbackContext) -> Optional[Content
     print(f"  Current State: {callback_context.state.to_dict()}")
 
     # Return Content to skip agent execution
-    test_skip = False
-    if test_skip:
-        print(f"  Agent skipped")
+    test = False
+    if test:
+        print(f"  Agent execution skipped")
         return Content(
             parts=[
                 Part(
-                    text=f"Agent '{callback_context.agent_name}' skipped by 'before_agent_callback'."
+                    text=f"Agent '{callback_context.agent_name}' execution skipped by 'before_agent_callback'."
                 )
             ],
             role="model",  # Assign model role to the overriding response
@@ -46,13 +46,15 @@ def after_agent_callback(callback_context: CallbackContext) -> Optional[Content]
     print(f"  Invocation ID: {callback_context.invocation_id}")
     print(f"  Current State: {callback_context.state.to_dict()}")
 
-    # Return Content to modify the final response
-    test_modify = False
-    if test_modify:
+    # Return Content to modify the agent response
+    test = False
+    if test:
         print(f"  Agent response modified")
         return Content(
             parts=[
-                Part(text=f"This is additional response added by after_agent_callback.")
+                Part(
+                    text=f"This is additional response added by 'after_agent_callback'."
+                )
             ],
             role="model",  # Assign model role to the overriding response
         )
@@ -71,25 +73,20 @@ def before_model_callback(
     print(f"  Invocation ID: {callback_context.invocation_id}")
 
     # Inspect the last user message in the request
-    test_inspect = False
-    if test_inspect:
+    test = False
+    if test:
         last_user_message = ""
         if llm_request.contents and llm_request.contents[-1].role == "user":
             if llm_request.contents[-1].parts:
                 last_user_message = llm_request.contents[-1].parts[0].text
-        print(f" Inspecting last user message: '{last_user_message}'")
+        print(f"  Inspecting last user message: '{last_user_message}'")
 
     # Return LlmResponse to skip model call
-    test_skip = False
-    if test_skip:
+    if test:
         print(f"  Model call skipped")
         return LlmResponse(
             content=Content(
-                parts=[
-                    Part(
-                        text=f"Model call skipped by 'before_model_callback' for agent '{callback_context.agent_name}'."
-                    )
-                ],
+                parts=[Part(text=f"Model call skipped by 'before_model_callback'.")],
                 role="model",  # Assign model role to the overriding response
             )
         )
@@ -108,16 +105,15 @@ def after_model_callback(
     print(f"  Invocation ID: {callback_context.invocation_id}")
 
     # Inspect the model response
-    test_inspect = False
-    if test_inspect:
+    test = False
+    if test:
         response_text = ""
         if llm_response.content and llm_response.content.parts:
             response_text = llm_response.content.parts[0].text
         print(f"  Inspecting model response: '{response_text}'")
 
-    # Modify the model response
-    test_modification = False
-    if test_modification:
+    # Modify the model response with a new LlmResponse
+    if test:
         print(f"  Model response modified to be uppercase")
         modified_response = LlmResponse(
             content=Content(
@@ -147,11 +143,15 @@ def before_tool_callback(
     print(f"  Tool: {tool.name}")
     print(f"  Args: {args}")
 
-    test_skip = False
-    if test_skip:
+    # Return tool response to skip tool execution
+    test = False
+    if test:
         if tool.name == "get_weather" and args.get("location").lower() == "london":
-            print(f"  Tool execution skipped for location London")
-            return f"The weather in London is always rainy and gloomy."
+            tool_response = "The weather in London is always rainy and gloomy."
+            print(
+                f"  Tool execution skipped for location London and returning tool response: {tool_response}"
+            )
+            return tool_response
 
     # Allow default behavior
     return None
@@ -170,11 +170,13 @@ def after_tool_callback(
     print(f"  Args: {args}")
     print(f"  Tool response: {tool_response}")
 
-    test_modify = True
-    if test_modify:
+    # Modify the tool response
+    test = True
+    if test:
         if tool.name == "get_weather":
-            print(f"  Tool response modified for get_weather")
-            return f"The weather is always rainy and gloomy."
+            tool_response = "The weather is always rainy and gloomy."
+            print(f"  Tool response modified for 'get_weather' to: {tool_response}")
+            return tool_response
 
     # Allow default behavior
     return None
